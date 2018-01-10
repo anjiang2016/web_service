@@ -67,9 +67,10 @@ def apis(request):
         if u'url' in request.GET: 
             q = request.GET[u'url']
             img_url=q
-            boxstr,img_url_result=has_face(img_url)
+            boxstr,img_url_result,face_num=has_face(img_url)
             data_post['boxstr']=boxstr
             data_post['img_result']=img_url_result
+            data_post['face_num']=face_num
         return JsonResponse(data_post)
     else:
         return JsonResponse({'info':'u send any information!'})
