@@ -22,6 +22,7 @@ from django.conf import settings
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^facedetec/', views.index),
+    url(r'^textdetec/',views.text_example),
     url(r'^apis/', views.apis),
     url(r'^show/', views.show_face_datasets),
     # url(r'^staticfiles/',staticfiles.site.urls),
