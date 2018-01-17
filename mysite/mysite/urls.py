@@ -17,14 +17,16 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.contrib import staticfiles
 from polls import views
+from run_python import views as rviews
 from django.conf.urls.static import static
 from django.conf import settings
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^facedetec/', views.index),
+    #url(r'^facedetec/', views.index),
     url(r'^textdetec/',views.text_example),
     url(r'^apis/', views.apis),
     url(r'^show/', views.show_face_datasets),
+    url(r'^run/', rviews.run),
     # url(r'^staticfiles/',staticfiles.site.urls),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
