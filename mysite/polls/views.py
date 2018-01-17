@@ -12,7 +12,7 @@ import requests
 sys.path.append("/home/mingmingzhao/MTCNN-Tensorflow/test/")
 sys.path.append("/home/mingmingzhao/MTCNN-Tensorflow/")
 #from home.mingmingzhao.MTCNN-Tensorflow.test import face_detect
-import face_detect
+#import face_detect
 
 ctpn_root='/data1/mingmingzhao/'
 sys.path.append(ctpn_root+'/CTPN/tools/')
@@ -22,7 +22,7 @@ sys.path.append(ctpn_root+'/CTPN/caffe/python/')
 #sys.path.append(ctpn_root+'/CTPN/caffe/')
 sys.path.append(ctpn_root+'/CTPN/src/')
 #sys.path.append(ctpn_root+'/CTPN/caffe/build/lib/')
-import text_detect
+#import text_detect
 
 # Create your views here.
 
