@@ -13,13 +13,16 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+#from django.conf.urls import url,include
+from django.conf.urls import url, include
 from django.contrib import admin
 from django.contrib import staticfiles
 from polls import views
 from run_python import views as rviews
 from django.conf.urls.static import static
 from django.conf import settings
+from ckeditor.fields import RichTextField
+import ckeditor
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     #url(r'^facedetec/', views.index),
@@ -28,5 +31,7 @@ urlpatterns = [
     url(r'^show/', views.show_face_datasets),
     url(r'^run/', rviews.run),
     # url(r'^staticfiles/',staticfiles.site.urls),
+    url(r'^ckeditor/',include('ckeditor_uploader.urls'))
+    # url(r'^blog/', include('blog.urls'))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

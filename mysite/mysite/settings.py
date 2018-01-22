@@ -14,11 +14,18 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+#STATIC_ROOT=os.path.join(BASE_DIR,'/static/')
+STATIC_ROOT='/data1/mingmingzhao/data_sets/test/stiatic/'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
-
+#MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(STATIC_ROOT, "media")
+MEDIA_URL=MEDIA_ROOT+'/'
+#CKEDITOR_UPLOAD_PATH = "article_images"
+CKEDITOR_UPLOAD_PATH = os.path.join(STATIC_ROOT,"uploads/")
+CKEDITOR_IMAGE_BACKEND = "pillow"
+CKEDITOR_JQUERY_URL ='https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js'
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'v^j_h%%87ys7xd%n(wrmhl73&(c)9r_yfp-o)hei(^$1=n76(_'
 
@@ -38,6 +45,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'polls',
+    'run_python',
+    'ckeditor',
+    'ckeditor_uploader'
 ]
 
 MIDDLEWARE = [
