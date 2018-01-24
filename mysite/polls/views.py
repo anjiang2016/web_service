@@ -22,7 +22,7 @@ sys.path.append(ctpn_root+'/CTPN/caffe/python/')
 #sys.path.append(ctpn_root+'/CTPN/caffe/')
 sys.path.append(ctpn_root+'/CTPN/src/')
 #sys.path.append(ctpn_root+'/CTPN/caffe/build/lib/')
-#import text_detect
+import text_detect
 
 # Create your views here.
 
